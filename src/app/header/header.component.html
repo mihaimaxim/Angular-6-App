@@ -15,8 +15,10 @@
           manage
         </a>
         <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" style="cursor: pointer">save data</a>
-          <a class="dropdown-item" style="cursor: pointer">fetch data</a>
+          <a class="dropdown-item" style="cursor: pointer" 
+          (click)="onSaveRecipes()">save data</a>
+          <a class="dropdown-item" style="cursor: pointer"
+          (click)="onGetRecipes()">fetch data</a>
         </div>
       </li>
     </ul>
