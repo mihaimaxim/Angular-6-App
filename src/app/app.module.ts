@@ -16,19 +16,16 @@ import { RecipesModule } from './recipes/recipes.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
     RecipesModule,
     ShoppingListModule,
