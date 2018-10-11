@@ -11,14 +11,13 @@ import { DataStorageService } from './shared-elements/data-storage.service';
 import { RecipeService } from './recipes/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 
+import { AuthenticationModule } from './authentication/authentication.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { SigninComponent } from './authentication/signin/signin.component';
-import { SignupComponent } from './authentication/signup/signup.component';
 
 
 @NgModule({
@@ -26,8 +25,6 @@ import { SignupComponent } from './authentication/signup/signup.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SignupComponent,
-    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +32,7 @@ import { SignupComponent } from './authentication/signup/signup.component';
     HttpModule,
     RecipesModule,
     ShoppingListModule,
+    AuthenticationModule,
     AppRoutingModule
   ],
   providers: [
