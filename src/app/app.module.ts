@@ -1,30 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './/app-routing.module';
+
+import { AuthGuard } from './authentication/auth-guard.service';
+import { AuthService } from './authentication/auth.service';
+import { DataStorageService } from './shared-elements/data-storage.service';
+import { RecipeService } from './recipes/recipe.service';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
+
+import { RecipesModule } from './recipes/recipes.module';
+import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { FooterComponent } from './footer/footer.component';
-import { ShoppingListService } from './shopping-list/shopping-list.service';
-import { RecipeService } from './recipes/recipe.service';
-import { AppRoutingModule } from './/app-routing.module';
-import { DataStorageService } from './shared-elements/data-storage.service';
-import { SignupComponent } from './authentication/signup/signup.component';
+import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './authentication/signin/signin.component';
-import { AuthService } from './authentication/auth.service';
-import { AuthGuard } from './authentication/auth-guard.service';
-import { RecipesModule } from './recipes/recipes.module';
+import { SignupComponent } from './authentication/signup/signup.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
     FooterComponent,
     SignupComponent,
     SigninComponent
@@ -34,12 +34,13 @@ import { RecipesModule } from './recipes/recipes.module';
     FormsModule,
     HttpModule,
     RecipesModule,
+    ShoppingListModule,
     AppRoutingModule
   ],
   providers: [
-    ShoppingListService, 
-    RecipeService, 
-    DataStorageService, 
+    ShoppingListService,
+    RecipeService,
+    DataStorageService,
     AuthService,
     AuthGuard
   ],
