@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { Response } from '@angular/http';
 
-import { DataStorageService } from '../shared-elements/data-storage.service';
-import { AuthService } from '../authentication/auth.service';
+import { DataStorageService } from '../../shared-elements/data-storage.service';
+import { AuthService } from '../../authentication/auth.service';
+
+
 
 @Component({
   selector: 'app-header',
