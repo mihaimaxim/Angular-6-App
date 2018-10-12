@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AuthenticationModule } from './authentication/authentication.module';
@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     RecipesModule,
     ShoppingListModule,
     AuthenticationModule,
